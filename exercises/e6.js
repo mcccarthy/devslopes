@@ -1,13 +1,16 @@
-import { data } from "../data/data";
+/** @format */
+
+import {data} from '../data/data';
 
 // SPACE DATA EXERCISE 6
 // Return an array with all asteroids names discovered after a given year
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidsDiscoveredAfterYear(data, year) {
-  // Your code goes here...
+	return data.asteroids
+		.filter((asteroid) => asteroid.discoveryYear > year)
+		.map((asteroid) => asteroid.name);
 }
-
 
 
 // === TEST YOURSELF ===
