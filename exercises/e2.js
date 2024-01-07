@@ -5,7 +5,16 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidNames(data) {
-  // Your code goes here...
+
+	if (!Array.isArray(data.asteroids)) {
+		console.error('Data does not contain a planets array');
+		return [];
+	}
+
+	// Map over the planets array to extract planet names
+	let asteroidNames = data.asteroids.map((asteroid) => asteroid.name);
+
+	return asteroidNames;
 }
 
 

@@ -1,11 +1,22 @@
-import { data } from "../data/data";
+/** @format */
+
+import {data} from '../data/data';
 
 // SPACE DATA EXERCISE 1
 // Return an array of all Planets' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetNames(data) {
-  // Your code goes here...
+	// Check if data.planets is an array
+	if (!Array.isArray(data.planets)) {
+		console.error('Data does not contain a planets array');
+		return [];
+	}
+
+	// Map over the planets array to extract planet names
+	let planetNames = data.planets.map((planet) => planet.name);
+
+	return planetNames;
 }
 
 
