@@ -1,4 +1,6 @@
-import { data } from "../data/data";
+/** @format */
+
+import {data} from '../data/data';
 
 // SPACE DATA EXERCISE 11
 // Return an array of Planets' names with less than 10 moons
@@ -6,7 +8,13 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function lowMoonsPlanets(data) {
-  // Your code goes here...
+	const filteredPlanets = data.planets.filter((planet) => {
+		return planet.moonsCount < 10 || planet.moonsCount === undefined;
+	});
+
+	const planetNames = filteredPlanets.map((planet) => planet.name);
+
+	return planetNames;
 }
 
 // === TEST YOURSELF ===
