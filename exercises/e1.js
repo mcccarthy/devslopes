@@ -7,15 +7,7 @@ import {data} from '../data/data';
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetNames(data) {
-	// Check if data.planets is an array
-	if (!Array.isArray(data.planets)) {
-		console.error('Data does not contain a planets array');
-		return [];
-	}
-
-	// Map over the planets array to extract planet names
 	let planetNames = data.planets.map((planet) => planet.name);
-
 	return planetNames;
 }
 

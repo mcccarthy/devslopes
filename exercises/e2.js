@@ -1,23 +1,13 @@
-import { data } from "../data/data";
+import {data} from '../data/data';
 
 // SPACE DATA EXERCISE 2
 // Return an array of all Asteroids' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidNames(data) {
-
-	if (!Array.isArray(data.asteroids)) {
-		console.error('Data does not contain a planets array');
-		return [];
-	}
-
-	// Map over the planets array to extract planet names
 	let asteroidNames = data.asteroids.map((asteroid) => asteroid.name);
-
 	return asteroidNames;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"

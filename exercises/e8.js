@@ -5,16 +5,11 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-	// Find the planet which has the given moon
 	const planetWithMoon = data.planets.find(
 		(planet) => planet.moons && planet.moons.includes(moonName)
 	);
-
-	// If such a planet is found, return its name, otherwise return null
 	return planetWithMoon ? planetWithMoon.name : null;
 }
-
-
 
 
 // === TEST YOURSELF ===
