@@ -1,14 +1,24 @@
-import { data } from "../data/data";
+/** @format */
+
+import {data} from '../data/data';
 
 // SPACE DATA EXERCISE 15
 // Return an array of Planets' names without moons
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsWithNoMoons(data) {
-  // Your code goes here...
+	const planets = data.planets;
+
+	const planetsWithNoMoons = planets.filter(
+		(planet) => planet.moonsCount === undefined || planet.moonsCount === 0
+	);
+
+	const namesOfPlanetsWithNoMoons = planetsWithNoMoons.map(
+		(planet) => planet.name
+	);
+
+	return namesOfPlanetsWithNoMoons;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"
