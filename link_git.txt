@@ -1,5 +1,0 @@
-I have been gone a few months working on js projects and working, I don't quite remember how or what I am suppose to submit, here is all the links git gave me, I think or thought you just needed the https: I am not sure but here is all of them. 
-
-https://github.com/mcccarthy/devslopes.git
-gh repo clone mcccarthy/devslopes
-git@github.com:mcccarthy/devslopes.git

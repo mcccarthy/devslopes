@@ -8,12 +8,7 @@ import {data} from '../data/data';
 
 export function getOrbitalPeriodsSum(data) {
 	const asteroids = data.asteroids;
-	let sum = 0;
-	for (let i = 0; i < asteroids.length; i++) {
-	const	orbitalPeriod = asteroids[i].orbitalPeriod;
-		sum += orbitalPeriod;
-	}
-	return sum;
+	return asteroids.reduce((sum, asteroid) => sum + asteroid.orbitalPeriod, 0);
 }
 
 // === TEST YOURSELF ===

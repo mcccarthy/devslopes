@@ -1,0 +1,5 @@
+new links revised and shortened
+
+https://github.com/mcccarthy/devslopes.git
+git@github.com:mcccarthy/devslopes.git
+gh repo clone mcccarthy/devslopes

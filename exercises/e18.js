@@ -20,8 +20,6 @@ export function getGreatestDiscoveryYear(data) {
 			yearCounts[year] = 1;
 		}
 	}
-
-
 	const maxYear = maxBy(Object.keys(yearCounts), (year) => yearCounts[year]);
 
 	return parseInt(maxYear);

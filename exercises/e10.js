@@ -1,4 +1,6 @@
-import { data } from "../data/data";
+/** @format */
+
+import {data} from '../data/data';
 
 // SPACE DATA EXERCISE 10
 // Return a given asteroid object of data
@@ -10,12 +12,9 @@ export function getAsteroidDataByName(data, asteroidName) {
 			return asteroid.name === asteroidName;
 		});
 	} else {
-		// Return undefined if there's no 'asteroids' array or if it's not an array
 		return undefined;
 	}
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
