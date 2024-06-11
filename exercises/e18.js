@@ -4,10 +4,29 @@
  * Return example: 1902
  */
 
+
+
+import {maxBy} from './e17';
+
 export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
+	const yearCounts = {};
+
+	for (let i = 0; i < data.asteroids.length; i++) {
+		const asteroid = data.asteroids[i];
+		const year = asteroid.discoveryYear;
+		if (yearCounts[year]) {
+			yearCounts[year]++;
+		} else {
+			yearCounts[year] = 1;
+		}
+	}
+
+
+	const maxYear = maxBy(Object.keys(yearCounts), (year) => yearCounts[year]);
+
+	return parseInt(maxYear);
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-18"
